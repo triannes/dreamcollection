@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  background: radial-gradient(#0b0f26, #000);
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Sono", monospace;
+  color: white;
+}
+
+.monsieur-la-doulaise-regular {
+  font-family: "Monsieur La Doulaise", cursive;
+}
+
+.sono-sono {
+  font-family: "Sono", monospace;
+}
+
+.title {
+  position: absolute;
+  top: 40%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  font-family: "Monsieur La Doulaise";
+  font-size: 50px;
+  text-align: center;
+}
+
+.titlecloud {
+  position: absolute;
+  top: 15%;
+  width: 450px;
+  right: 33%;
+  opacity: 60%;
+}
+
+.line {
+  position: absolute;
+  border-top: 1px dashed white; 
+  z-index: 5; 
+  transform-origin: left center;
+}
+
+.line1-2 {
+  top: 24%;   
+  left: 25%;   
+  width: 40%;   
+}
+
+.line2-3 {
+  top: 24%;     
+  left: 67%;    
+  width: 25%;   
+  transform: rotate(35deg);
+}
+
+.line3-4 {
+  top: 48%;     
+  left: 87%;    
+  width: 25%;   
+  transform: rotate(130deg); 
+}
+
+.line4-5 {
+  top: 82%;     
+  left: 71%;    
+  width: 55%;   
+  transform: rotate(185deg); 
+}
+
+.line5-1 {
+  top: 75%;     
+  left: 15%;    
+  width: 30%;   
+  transform: rotate(-72deg); 
+}
+
+.star1wrapper, .star2wrapper, .star3wrapper, .star4wrapper {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+}
+
+.star1wrapper { top: 15%; left: 20%; }
+.star2wrapper { top: 15%; right: 30%; }
+.star3wrapper { top: 40%; right: 10%; }
+.star4wrapper { bottom: 20%; left: 10%; }
+
+.star1, .star2, .star3, .star4 {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.caption {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Sono";
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.star1wrapper:hover .caption,
+.star2wrapper:hover .caption,
+.star3wrapper:hover .caption,
+.star4wrapper:hover .caption {
+  opacity: 1;
+}
+
+.spin {
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#selected-song {
+  position: absolute;
+  top: 52%; 
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Sono";
+  font-size: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  z-index: 15;
+}
+
+#selected-song.show {
+  opacity: 1;
+}
+
+#shared-progress-container {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  margin-top: 8px;
+}
+
+#shared-progress-bar {
+  width: 0%;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+.starsmall1 {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9);
+  top: 81.7%;
+  left: 70.7%;
+}
+
+.starsmall2 {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9);
+  top: 40%;
+  left: 80%;
+}
+
+.starsmall3 {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9);
+  top: 23.8%;
+  left: 40%;
+}
+
+.starsmall4 {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9);
+  top: 78.2%;
+  left: 47%;
+}
+
+.starsmall5 {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9);
+  top: 60%;
+  left: 17.5%;
+}

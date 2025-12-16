@@ -1,0 +1,108 @@
+.sono-sono {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+	body {
+			background-color: rgb(231, 217, 237);
+			margin: 0;
+			display: flex;
+			justify-content: center;
+		}
+
+		img {
+			width: 350px;
+		}
+
+
+		h1 {
+			font-family: sans-serif;
+			font-size:50px;
+		}
+
+		h5 {
+			font-family: "Sono";
+			font-weight: bold;
+			font-size:15px;
+		}
+
+		p {
+			font-family: "Sono";
+			font-size: 15px;
+		}
+
+
+		#inspo {
+			color: rebeccapurple;
+		}
+
+		#question2 {
+			font-family: sans-serif;
+			font-size: 20px;
+		}
+
+		#extensionidea {
+			font-family: sans-serif;
+			font-size: 20px;
+		}
+
+		#appearanceinspo {
+			font-family:sans-serif;
+			letter-spacing: 5px;
+			font-size: 20px;
+		}
+
+		#personalityheader {
+			font-family: sans-serif;
+			font-size: 20px;
+		}
+
+		#extensionlook {
+			font-family: sans-serif;
+			font-size: 20px;
+		}
+
+		#dialoguebox {
+			font-family: sans-serif;
+			font-size: 20px;
+		}
+
+		#asleepdialogue {
+			font-family: sans-serif;
+			font-size: 20px;
+		}
+
+		.italic_text {
+			font-style: bold;
+		}
+
+		a {
+			font-size: 20px;
+			color: rebeccapurple;
+			font-family: sans-serif;
+		}
+
+		#imageappearance {
+			background-color: whitesmoke;
+			max-width: 800px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 0px;
+		}
+
+		.container {
+			background-color: rgb(247, 240, 250);
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 50px;
+		}
+
+		#dreamhubcontainer {
+			text-align: center;
+			position: relative;
+		}

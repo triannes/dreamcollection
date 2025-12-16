@@ -1,0 +1,186 @@
+.mydreams {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    translate: -50% 0;
+    font-size: 70px;
+    font-weight: bold;
+    color: whitesmoke;
+    transition: opacity 1s ease-in-out;
+    cursor: pointer;
+    font-family: "Sono";
+}
+
+.mydreams:hover {
+    opacity: 0;
+}
+
+.subtext {
+    position: absolute;
+    color: whitesmoke;
+    font-family: "Sono";
+    font-size: 15px;
+    text-align: center;
+    top: 180px;      
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    color: white;
+}
+
+.sono-sono {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "MONO" 1;
+}
+
+.b {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.8;
+    box-shadow: 0 0 15px 10px rgba(255,255,255,0.5);
+    top: -50px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: scale(1); top: -50px; }
+    2% { transform: scale(1); }
+    100% { transform: scale(0); top: 100%; }
+}
+
+.b{
+  border-radius:50%;
+  float: left;
+  margin-top: -50px;
+  position: absolute;
+  @for $i from 0 to $b {
+    $rw:random(10)+1;
+   
+    $ra:random(20)+10;
+    $rd:random(10)+1;
+    
+    $rc:random(10)+90;
+    
+                    
+    &:nth-child(#{$i + 1}){
+      margin-left: (percentage(1)/$b)*$i;
+      width: $rw+px;
+      height: $rw+px;
+      background:hsla(0,0%,$rc,.8);
+      box-shadow: 0 0 15px 10px hsla(0,0%,$rc,.5);
+      animation: fall $ra+s $rd+s  infinite;
+    }    
+  }
+}
+
+@keyframes fall { 0% { transform: scale(0) }
+                  2% { transform: scale(1); top: -50px; } 
+                100% { transform: scale(0); top: 100%; } }
+
+#star {
+    width: 100vw;
+    height: -1000px;
+}
+
+body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(#656e96,#8c95be);
+      overflow: hidden;
+    }
+
+.gallery-wrapper {
+    position: absolute;
+    top: 55%;       
+    left: 50%;        
+    transform: translate(-50%, -50%);
+    }
+
+.gallery {
+      display: flex;
+      gap: 120px;
+    }
+
+.gallery img {
+      width: 300px;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+#dream1:hover {
+    transform: scale(1.2);
+}
+
+#dream2:hover {
+    transform: scale(1.2);
+}
+
+#dream3:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.15);
+  color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  max-width: 400px;
+  font-family: "Sono";
+  box-shadow: 
+    0 0 20px rgba(255,255,255,0.1),
+    0 0 40px rgba(255,255,255,0.3);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.starborder {
+  position: fixed;
+  bottom: -70px;
+  right: 80%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#starborder {
+  width: 300px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.starborder2 {
+  position: fixed;
+  bottom: -70px;
+  right: -1%;
+  z-index: -1;
+  pointer-events: none;
+  transform: scaleX(-1);
+}
+
+#starborder2 {
+  width: 300px;
+  height: auto;
+  opacity: 0.8;
+}
